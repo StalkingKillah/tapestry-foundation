@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+    <a href="#" data-reveal-id="${id}">
+        <t:delegate to="link" />
+    </a>
+    <div id="${id}" class="${modalStyle}">
+        <t:delegate to="modal" />
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+</t:container>

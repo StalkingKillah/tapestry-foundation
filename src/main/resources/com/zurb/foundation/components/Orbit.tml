@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+    <div class="hide-for-small">
+        <div id="featured">
+            <t:if test="!images.empty">
+                <t:loop source="images" value="image">
+                    <img src="image" />
+                </t:loop>
+                <p:else>
+                    <img src="http://placehold.it/1000x400" alt="slide image" />
+                    <img src="http://placehold.it/1000x400" alt="slide image" />
+                    <img src="http://placehold.it/1000x400" alt="slide image" />
+                </p:else>
+            </t:if>
+        </div>
+    </div>
+</t:container>

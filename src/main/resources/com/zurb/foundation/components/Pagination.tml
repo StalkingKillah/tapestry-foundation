@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+    <ul class="pagination">
+        <t:if test="startLink">
+            <li class="arrow"><a href="${startLink}">&laquo;</a></li>
+            <p:else>
+                <li class="arrow unavailable"><a href="#">&laquo;</a></li>
+            </p:else>
+        </t:if>
+        <t:loop source="start..end" value="i">
+            <t:if test="visible">
+                <li class="${current}"><a href="${link}">${i}</a></li>
+                <p:else>
+                    <t:if test="displayTrippleDot">
+                      <li class="unavailable">&hellip;</li>
+                    </t:if>
+                </p:else>
+            </t:if>
+        </t:loop>
+        <t:if test="endLink">
+            <li class="arrow"><a href="${endLink}">&raquo;</a></li>
+            <p:else>
+                <li class="arrow unavailable"><a href="#">&raquo;</a></li>
+            </p:else>
+        </t:if>
+    </ul>
+</t:container>
